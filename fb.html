@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: #333;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item {
+            flex: 1 1 calc(25% - 10px);
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-item {
+                flex: 1 1 calc(50% - 10px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-item {
+                flex: 1 1 calc(100% - 10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Flexbox Image Gallery</h1>
+    </header>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="heisen1.jpg" alt="Sample Image 1">
+        </div>
+        <div class="gallery-item">
+            <img src="heisen2.jpg" alt="Sample Image 2">
+        </div>
+        <div class="gallery-item">
+            <img src="heisen3.jpg" alt="Sample Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="pink1.jpg" alt="Sample Image 4">
+        </div>
+        <div class="gallery-item">
+            <img src="pink2.jpg" alt="Sample Image 5">
+        </div>
+        <div class="gallery-item">
+            <img src="good1.jpg" alt="Sample Image 6">
+        </div>
+        <div class="gallery-item">
+            <img src="good2.jpg" alt="Sample Image 7">
+        </div>
+        <div class="gallery-item">
+            <img src="good3.jpg" alt="Sample Image 8">
+        </div>
+    </div>
+</body>
+</html>
